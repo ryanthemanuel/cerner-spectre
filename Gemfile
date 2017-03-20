@@ -22,8 +22,10 @@ gem 'image_size'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-gem 'unicorn'
+group :production do
+  gem 'rails_12factor', '0.0.2'
+  gem 'puma', '2.11.1'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
